@@ -1,32 +1,26 @@
-# Fake 3D Image Effect with WebGL
+# Olumide Olugbemiro | Portfolio
 
-An interactive "fake" 3D effect for images with plain WebGL.
+
 
 ![Fake 3D Image Effect](https://tympanus.net/codrops/wp-content/uploads/2019/02/Fake3dEffect_featured.jpg)
 
-[Article on Codrops](https://tympanus.net/codrops/?p=38413)
+[Webpage](olumide95.github.io)
 
-[Demo](http://tympanus.net/Tutorials/fake3d/)
+[Demo](olumide95.github.io)
 
 ## Credits
 
-*   [Gyronorm](https://github.com/dorukeker/gyronorm.js/) library by [Doruk Eker](http://dorukeker.com)
-*   Photo by [Cosmic Timetraveler](https://unsplash.com/photos/YK_8mABhrtc)
-*   Photo by [Chelsea Ferenando](https://unsplash.com/photos/WJRZNL7rDF8)
-*   Photo by [Rio Syhputra](https://unsplash.com/photos/JnOHvMgw_Jo)
-*   Phoyo by [Jonatan Pie](https://unsplash.com/photos/3l3RwQdHRHg)
+*   [Fake 3D Image Effect](https://tympanus.net/codrops/wp-content/uploads/2019/02/Fake3dEffect_featured.jpg)
 
-## License
-This resource can be used freely if integrated or build upon in personal or commercial projects such as websites, web apps and web templates intended for sale. It is not allowed to take the resource "as-is" and sell it, redistribute, re-publish it, or sell "pluginized" versions of it. Free plugins built using this resource should have a visible mention and link to the original work. Always consider the licenses of all included libraries, scripts and images used.
+*   [Article on Codrops](https://tympanus.net/codrops/?p=38413)
 
 ## Misc
 
-Follow akella: [Twitter](https://twitter.com/akella), [Instagram](http://instagram.com/akella_), [Facebook](https://facebook.com/akella), [GitHub](https://github.com/akella) 
-
-Follow Codrops: [Twitter](http://www.twitter.com/codrops), [Facebook](http://www.facebook.com/codrops), [Google+](https://plus.google.com/101095823814290637419), [GitHub](https://github.com/codrops), [Pinterest](http://www.pinterest.com/codrops/), [Instagram](https://www.instagram.com/codropsss/)
+Follow olumide: [Twitter](https://twitter.com/N_0_V_A), [Instagram](http://instagram.com/lumi_de), [Facebook](https://facebook.com/olumide olugbemiro), [GitHub](https://github.com/olumide95) 
 
 
-[© Codrops 2018](http://www.codrops.com)
+
+[© Ølumide 2019(http://www.codrops.com)
 
 
 
