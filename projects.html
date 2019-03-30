@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Olumide Olugbemiro | Portfolio</title>
+		<meta name="description" content="Demo of the tutorial on how to create a fake 3D image effect with WebGL shaders." />
+		<meta name="keywords" content="webgl, 3d, image, shader, javascript, tutorial, demo, web development, effect" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="favicon.png">
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+
+		<link rel="stylesheet" type="text/css" href="css/base1.css" />
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/pieces.css" />
+		<link rel="stylesheet" type="text/css" href="sponsor/pater.css" />
+		
+
+		<style type="text/css">
+			
+
+			@import url("https://fonts.googleapis.com/css?family=Montserrat:100");
+html, body, h1 {
+  padding: 0;
+  margin: 0;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+}
+p {
+  font-weight: bolder;
+}
+
+#wrapper {
+  text-align: center;
+}
+
+.sub {
+  color: #64dcdc;
+  letter-spacing: 1em;
+}
+
+/* Our mixin positions a copy of our text
+directly on our existing text, while
+also setting content to the appropriate
+text set in the data-text attribute. */
+.glitch {
+  position: relative;
+  color: white;
+  font-size: 3em;
+  letter-spacing: .5em;
+  /* Animation provies a slight random skew. Check bottom of doc
+  for more information on how to random skew. */
+  animation: glitch-skew 1s infinite linear alternate-reverse;
+}
+.glitch::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  left: 2px;
+  text-shadow: -2px 0 #ff00c1;
+  /* Creates an initial clip for our glitch. This works in
+  a typical top,right,bottom,left fashion and creates a mask
+  to only show a certain part of the glitch at a time. */
+  clip: rect(44px, 450px, 56px, 0);
+  /* Runs our glitch-anim defined below to run in a 5s loop, infinitely,
+  with an alternating animation to keep things fresh. */
+  animation: glitch-anim 5s infinite linear alternate-reverse;
+}
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  left: -2px;
+  text-shadow: -2px 0 #00fff9, 2px 2px #ff00c1;
+  animation: glitch-anim2 1s infinite linear alternate-reverse;
+}
+
+/* Creates an animation with 20 steaps. For each step, it calculates 
+a percentage for the specific step. It then generates a random clip
+box to be used for the random glitch effect. Also adds a very subtle
+skew to change the 'thickness' of the glitch.*/
+@keyframes glitch-anim {
+  0% {
+    clip: rect(92px, 9999px, 85px, 0);
+    transform: skew(0.84deg);
+  }
+  5% {
+    clip: rect(22px, 9999px, 87px, 0);
+    transform: skew(0.75deg);
+  }
+  10% {
+    clip: rect(36px, 9999px, 67px, 0);
+    transform: skew(0.39deg);
+  }
+  15% {
+    clip: rect(27px, 9999px, 73px, 0);
+    transform: skew(0.58deg);
+  }
+  20% {
+    clip: rect(8px, 9999px, 17px, 0);
+    transform: skew(0.18deg);
+  }
+  25% {
+    clip: rect(65px, 9999px, 61px, 0);
+    transform: skew(0.17deg);
+  }
+  30% {
+    clip: rect(6px, 9999px, 14px, 0);
+    transform: skew(0.54deg);
+  }
+  35% {
+    clip: rect(87px, 9999px, 34px, 0);
+    transform: skew(0.51deg);
+  }
+  40% {
+    clip: rect(21px, 9999px, 7px, 0);
+    transform: skew(0.4deg);
+  }
+  45% {
+    clip: rect(87px, 9999px, 22px, 0);
+    transform: skew(0.79deg);
+  }
+  50% {
+    clip: rect(34px, 9999px, 86px, 0);
+    transform: skew(0.5deg);
+  }
+  55% {
+    clip: rect(55px, 9999px, 30px, 0);
+    transform: skew(0.09deg);
+  }
+  60% {
+    clip: rect(32px, 9999px, 49px, 0);
+    transform: skew(0.76deg);
+  }
+  65% {
+    clip: rect(93px, 9999px, 62px, 0);
+    transform: skew(0.51deg);
+  }
+  70% {
+    clip: rect(99px, 9999px, 82px, 0);
+    transform: skew(0.53deg);
+  }
+  75% {
+    clip: rect(58px, 9999px, 84px, 0);
+    transform: skew(0.94deg);
+  }
+  80% {
+    clip: rect(37px, 9999px, 97px, 0);
+    transform: skew(0.31deg);
+  }
+  85% {
+    clip: rect(20px, 9999px, 83px, 0);
+    transform: skew(0.49deg);
+  }
+  90% {
+    clip: rect(97px, 9999px, 75px, 0);
+    transform: skew(0.44deg);
+  }
+  95% {
+    clip: rect(49px, 9999px, 54px, 0);
+    transform: skew(0.94deg);
+  }
+  100% {
+    clip: rect(15px, 9999px, 52px, 0);
+    transform: skew(0.97deg);
+  }
+}
+@keyframes glitch-anim2 {
+  0% {
+    clip: rect(65px, 9999px, 22px, 0);
+    transform: skew(0.87deg);
+  }
+  5% {
+    clip: rect(17px, 9999px, 79px, 0);
+    transform: skew(0.19deg);
+  }
+  10% {
+    clip: rect(43px, 9999px, 53px, 0);
+    transform: skew(0.04deg);
+  }
+  15% {
+    clip: rect(93px, 9999px, 38px, 0);
+    transform: skew(0.24deg);
+  }
+  20% {
+    clip: rect(16px, 9999px, 100px, 0);
+    transform: skew(0.08deg);
+  }
+  25% {
+    clip: rect(3px, 9999px, 89px, 0);
+    transform: skew(0.28deg);
+  }
+  30% {
+    clip: rect(86px, 9999px, 20px, 0);
+    transform: skew(0.01deg);
+  }
+  35% {
+    clip: rect(98px, 9999px, 31px, 0);
+    transform: skew(0.16deg);
+  }
+  40% {
+    clip: rect(5px, 9999px, 68px, 0);
+    transform: skew(0.12deg);
+  }
+  45% {
+    clip: rect(46px, 9999px, 24px, 0);
+    transform: skew(0.95deg);
+  }
+  50% {
+    clip: rect(45px, 9999px, 32px, 0);
+    transform: skew(0.7deg);
+  }
+  55% {
+    clip: rect(17px, 9999px, 29px, 0);
+    transform: skew(0.67deg);
+  }
+  60% {
+    clip: rect(56px, 9999px, 40px, 0);
+    transform: skew(0.77deg);
+  }
+  65% {
+    clip: rect(32px, 9999px, 59px, 0);
+    transform: skew(0.67deg);
+  }
+  70% {
+    clip: rect(40px, 9999px, 60px, 0);
+    transform: skew(0.63deg);
+  }
+  75% {
+    clip: rect(43px, 9999px, 30px, 0);
+    transform: skew(0.97deg);
+  }
+  80% {
+    clip: rect(58px, 9999px, 22px, 0);
+    transform: skew(0.33deg);
+  }
+  85% {
+    clip: rect(41px, 9999px, 42px, 0);
+    transform: skew(0.8deg);
+  }
+  90% {
+    clip: rect(21px, 9999px, 19px, 0);
+    transform: skew(0.43deg);
+  }
+  95% {
+    clip: rect(9px, 9999px, 56px, 0);
+    transform: skew(0.16deg);
+  }
+  100% {
+    clip: rect(73px, 9999px, 82px, 0);
+    transform: skew(0.91deg);
+  }
+}
+@keyframes glitch-skew {
+  0% {
+    transform: skew(-3deg);
+  }
+  10% {
+    transform: skew(-3deg);
+  }
+  20% {
+    transform: skew(1deg);
+  }
+  30% {
+    transform: skew(1deg);
+  }
+  40% {
+    transform: skew(0deg);
+  }
+  50% {
+    transform: skew(1deg);
+  }
+  60% {
+    transform: skew(1deg);
+  }
+  70% {
+    transform: skew(4deg);
+  }
+  80% {
+    transform: skew(3deg);
+  }
+  90% {
+    transform: skew(-2deg);
+  }
+  100% {
+    transform: skew(-4deg);
+  }
+}
+
+.custom_frame{
+  position: fixed;
+    text-align: left;
+    z-index: 10000;
+    top: 0;
+    left: 0;
+    display: grid;
+    align-content: space-between;
+    width: 100%;
+    max-width: none;
+    height: 100vh;
+    padding: 2rem 3rem;
+    pointer-events: none;
+    grid-template-columns: 75% 25%;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 'title links'
+              'content content'
+              'github demos';
+}
+
+.slide__number{
+  color: white;
+}
+
+.slide__title{
+  pointer-events: auto;
+}
+
+
+.overlay-effect:before{
+  position: absolute;
+  content:" ";
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  display: block;
+  z-index:0;
+  background-color: rgba(135, 206, 235, 0.4);
+}
+
+		</style>
+	</head>
+	<body class="demo-3">
+		<main>
+      <svg class="hidden">
+      <symbol id="icon-arrow" viewBox="0 0 24 24">
+        <title>arrow</title>
+        <polygon points="6.3,12.8 20.9,12.8 20.9,11.2 6.3,11.2 10.2,7.2 9,6 3.1,12 9,18 10.2,16.8 "></polygon>
+      </symbol>
+      <symbol id="icon-drop" viewBox="0 0 24 24">
+        <title>drop</title>
+        <path d="M12,21c-3.6,0-6.6-3-6.6-6.6C5.4,11,10.8,4,11.4,3.2C11.6,3.1,11.8,3,12,3s0.4,0.1,0.6,0.3c0.6,0.8,6.1,7.8,6.1,11.2C18.6,18.1,15.6,21,12,21zM12,4.8c-1.8,2.4-5.2,7.4-5.2,9.6c0,2.9,2.3,5.2,5.2,5.2s5.2-2.3,5.2-5.2C17.2,12.2,13.8,7.3,12,4.8z"></path><path d="M12,18.2c-0.4,0-0.7-0.3-0.7-0.7s0.3-0.7,0.7-0.7c1.3,0,2.4-1.1,2.4-2.4c0-0.4,0.3-0.7,0.7-0.7c0.4,0,0.7,0.3,0.7,0.7C15.8,16.5,14.1,18.2,12,18.2z"></path>
+      </symbol>
+      <svg id="icon-github" viewBox="0 0 33 33">
+        <title>github</title>
+        <path d="M16.608.455C7.614.455.32 7.748.32 16.745c0 7.197 4.667 13.302 11.14 15.456.815.15 1.112-.353 1.112-.785 0-.386-.014-1.411-.022-2.77-4.531.984-5.487-2.184-5.487-2.184-.741-1.882-1.809-2.383-1.809-2.383-1.479-1.01.112-.99.112-.99 1.635.115 2.495 1.679 2.495 1.679 1.453 2.489 3.813 1.77 4.741 1.353.148-1.052.569-1.77 1.034-2.177-3.617-.411-7.42-1.809-7.42-8.051 0-1.778.635-3.233 1.677-4.371-.168-.412-.727-2.069.16-4.311 0 0 1.367-.438 4.479 1.67a15.602 15.602 0 0 1 4.078-.549 15.62 15.62 0 0 1 4.078.549c3.11-2.108 4.475-1.67 4.475-1.67.889 2.242.33 3.899.163 4.311C26.37 12.66 27 14.115 27 15.893c0 6.258-3.809 7.635-7.437 8.038.584.503 1.105 1.497 1.105 3.017 0 2.177-.02 3.934-.02 4.468 0 .436.294.943 1.12.784 6.468-2.159 11.131-8.26 11.131-15.455 0-8.997-7.294-16.29-16.291-16.29"></path>
+      </svg>
+      <symbol id="icon-caret" viewBox="0 0 24 13">
+        <title>caret</title>
+        <path d="M23.646.328a.842.842 0 0 0-1.19 0l-10.459 10.48L1.517.328a.842.842 0 0 0-1.189 1.19L11.382 12.57c.164.164.369.246.595.246.205 0 .43-.082.594-.246L23.625 1.518a.824.824 0 0 0 .02-1.19z"></path>
+      </symbol>
+    </svg>
+      <div class="custom_frame">
+<div 
+          id="gl" 
+          data-imageOriginal="img/canyon.jpg" 
+          data-imageDepth="img/canyon-map.jpg" 
+          data-horizontalThreshold="35" 
+          data-verticalThreshold="25">
+        </div>
+        
+        <div class="content">
+        <div class="content__inner">
+          <div class="content__top">
+              <div id="wrapper">
+    <!-- Make sure data-text equals the text you put inside the tags. -->
+    <h1 class="glitch"  data-text="
+Ølumide">Ølumide</h1>
+    <span class="sub" style="font-weight: bolder;">Olugbemiro</span>
+  </div>
+          
+          </div>
+      
+          
+          <!-- Sponsor -->
+        
+        </div><!-- /content__inner-->
+      
+    <div class="slideshow">
+        <div class="slide">
+          <div class="preview">
+            <div class="preview__img-wrap">
+              <div class="preview__img overlay-effect" style="background-image: url(img/project1.png);"></div>
+              <div class="preview__img-reveal"></div>
+            </div>
+            <h3 class="preview__title">Paydraft</h3>
+            <div class="preview__content">
+              <p>You’re not your job. You’re not how much money you have in the bank. You’re not the car you drive. You’re not the contents of your wallet. You’re not your f***ing khakis. You’re the all-singing, all-dancing crap of the world. What do you want? Wanna go back to the s*** job, f***in’ condo world, watching sitcoms? F*** you, I won’t do it. Fifth rule: one fight at a time, fellas.</p>
+            </div>
+          </div>
+          <div class="slide__img-wrap">
+            <div class="slide__img overlay-effect" style="background-image: url(img/1.png);"></div>
+            <div class="slide__img-reveal"></div>
+          </div>
+          <span class="slide__number">#01</span>
+          <h3 class="slide__title" id="pro1">Paydraft</h3>
+        </div>
+        <div class="slide">
+          <div class="preview">
+            <div class="preview__img-wrap">
+              <div class="preview__img" style="background-image: url(img/project2.jpg);"></div>
+              <div class="preview__img-reveal"></div>
+            </div>
+            <h3 class="preview__title">Jackardi Jack</h3>
+            <div class="preview__content">
+              <p>You’re not your job. You’re not how much money you have in the bank. You’re not the car you drive. You’re not the contents of your wallet. You’re not your f***ing khakis. You’re the all-singing, all-dancing crap of the world. What do you want? Wanna go back to the s*** job, f***in’ condo world, watching sitcoms? F*** you, I won’t do it. Fifth rule: one fight at a time, fellas.</p>
+            </div>
+          </div>
+          <div class="slide__img-wrap">
+            <div class="slide__img" style="background-image: url(img/2.jpg);"></div>
+            <div class="slide__img-reveal"></div>
+          </div>
+          <span class="slide__number">#02</span>
+          <h3 class="slide__title">Jackardi</h3>
+        </div>
+        <div class="slide">
+          <div class="preview">
+            <div class="preview__img-wrap">
+              <div class="preview__img" style="background-image: url(img/project3.jpg);"></div>
+              <div class="preview__img-reveal"></div>
+            </div>
+            <h3 class="preview__title">Hostabili Hell</h3>
+            <div class="preview__content">
+              <p>You’re not your job. You’re not how much money you have in the bank. You’re not the car you drive. You’re not the contents of your wallet. You’re not your f***ing khakis. You’re the all-singing, all-dancing crap of the world. What do you want? Wanna go back to the s*** job, f***in’ condo world, watching sitcoms? F*** you, I won’t do it. Fifth rule: one fight at a time, fellas.</p>
+            </div>
+          </div>
+          <div class="slide__img-wrap">
+            <div class="slide__img" style="background-image: url(img/3.jpg);"></div>
+            <div class="slide__img-reveal"></div>
+          </div>
+          <span class="slide__number">#03</span>
+          <h3 class="slide__title">Hostabili</h3>
+        </div>
+        <div class="slide">
+          <div class="preview">
+            <div class="preview__img-wrap">
+              <div class="preview__img" style="background-image: url(img/project4.jpg);"></div>
+              <div class="preview__img-reveal"></div>
+            </div>
+            <h3 class="preview__title">Tellawa Tell</h3>
+            <div class="preview__content">
+              <p>You’re not your job. You’re not how much money you have in the bank. You’re not the car you drive. You’re not the contents of your wallet. You’re not your f***ing khakis. You’re the all-singing, all-dancing crap of the world. What do you want? Wanna go back to the s*** job, f***in’ condo world, watching sitcoms? F*** you, I won’t do it. Fifth rule: one fight at a time, fellas.</p>
+            </div>
+          </div>
+          <div class="slide__img-wrap">
+            <div class="slide__img" style="background-image: url(img/4.jpg);"></div>
+            <div class="slide__img-reveal"></div>
+          </div>
+          <span class="slide__number">#04</span>
+          <h3 class="slide__title">Tellawa</h3>
+        </div>
+        <div class="slide">
+          <div class="preview">
+            <div class="preview__img-wrap">
+              <div class="preview__img" style="background-image: url(img/project5.jpg);"></div>
+              <div class="preview__img-reveal"></div>
+            </div>
+            <h3 class="preview__title">Lochnox Lox</h3>
+            <div class="preview__content">
+              <p>You’re not your job. You’re not how much money you have in the bank. You’re not the car you drive. You’re not the contents of your wallet. You’re not your f***ing khakis. You’re the all-singing, all-dancing crap of the world. What do you want? Wanna go back to the s*** job, f***in’ condo world, watching sitcoms? F*** you, I won’t do it. Fifth rule: one fight at a time, fellas.</p>
+            </div>
+          </div>
+          <div class="slide__img-wrap">
+            <div class="slide__img" style="background-image: url(img/5.jpg);"></div>
+            <div class="slide__img-reveal"></div>
+          </div>
+          <span class="slide__number">#05</span>
+          <h3 class="slide__title">Lochnox</h3>
+        </div>
+        <nav class="slidenav">
+          <button class="slidenav__item slidenav__item--prev">Previous</button>
+          <button class="slidenav__item slidenav__item--next">Next</button>
+          <button class="slidenav__preview">
+            <svg class="icon icon--caret">
+              <use xlink:href="#icon-caret"></use>
+            </svg>
+          </button>
+        </nav>
+      </div>
+         </div>
+        
+        
+      </div>
+		</main>
+		<script src="js/app.js"></script>
+
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+     <script src="js/TweenMax.min.js"></script>
+    <script src="js/demo.js"></script>
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript">
+     $( ".slide__title" ).click(function() {
+      $( ".slidenav__preview" ).click();
+    });
+    </script>
+	</body>
+</html>
