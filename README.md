@@ -2,11 +2,10 @@
 
 
 
-![Fake 3D Image Effect](https://tympanus.net/codrops/wp-content/uploads/2019/02/Fake3dEffect_featured.jpg)
+![Fake 3D Image Effect](readme.png)
 
-[Webpage](olumide95.github.io)
+[Webpage](https://olumide95.github.io)
 
-[Demo](olumide95.github.io)
 
 ## Credits
 
@@ -20,7 +19,7 @@ Follow olumide: [Twitter](https://twitter.com/N_0_V_A), [Instagram](http://insta
 
 
 
-[© Ølumide 2019(http://www.codrops.com)
+[© Ølumide 2019(https://olumide95.github.io)
 
 
 
