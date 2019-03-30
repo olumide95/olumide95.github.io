@@ -2,7 +2,7 @@
 
 
 
-![Fake 3D Image Effect](readme.png)
+![Fake 3D Image Effect](https://raw.githubusercontent.com/olumide95/olumide95.github.io/master/readme.PNG)
 
 [Webpage](https://olumide95.github.io)
 
