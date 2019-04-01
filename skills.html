@@ -230,11 +230,11 @@ color: ''
 
 var settings_mobile = {
 //height of sphere container
-height: 305,
+height: 300,
 //width of sphere container
-width: 305,
+width: 300,
 //radius of sphere
-radius: 95,
+radius: 90,
 //rotation speed
 speed: 1,
 //sphere rotations slower
@@ -259,6 +259,8 @@ color: ''
 $(document).ready(function(){
 $('#tagcloud').tagoSphere(settings);
 $('#tagcloud_mobile').tagoSphere2(settings_mobile);
+$('#tagcloud').mouseover();
+$('#tagcloud_mobile').mouseover();
 });
 
 
