@@ -3,11 +3,11 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Olumide Olugbemiro | Portfolio</title>
-		<meta name="description" content="Demo of the tutorial on how to create a fake 3D image effect with WebGL shaders." />
-		<meta name="keywords" content="webgl, 3d, image, shader, javascript, tutorial, demo, web development, effect" />
-		<meta name="author" content="Codrops" />
-		<link rel="shortcut icon" href="favicon.png">
+		<title>Olumide Olugbemiro | Full-Stack Web Developer</title>
+		<meta name="description" content="" />
+		<meta name="keywords" content="webgl, 3d, image, shader, javascript, portfolio" />
+		<meta name="author" content="Ølumide" />
+		<link rel="shortcut icon" href="favicon.PNG">
 		<link rel="stylesheet" type="text/css" href="css/base.css" />
 
 		
@@ -20,7 +20,7 @@
 		<style type="text/css">
 			
 
-			@import url("https://fonts.googleapis.com/css?family=Montserrat:100");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100");
 html, body, h1 {
   padding: 0;
   margin: 0;
@@ -428,9 +428,9 @@ a {
 					</div>
 					<div class="menu">
 						<ul class="menu__inner">
-							<li class="menu__item"><a class="menu__link" data-switch>Projects & Portfolio</a></li>
+							<li class="menu__item"><a class="menu__link" href="/projects" data-switch>Projects & Portfolio</a></li>
 							<li class="menu__item"><a class="menu__link" href="https://github.com/Olumide95"  data-switch>GitHub</a></li>
-							<li class="menu__item"><a class="menu__link" data-switch>Contact Me</a></li>
+							<li class="menu__item"><a class="menu__link" href="mailto:olugbemiro.olumide@gmail.com" data-switch>Contact Me</a></li>
 							<li class="menu__item"><a class="menu__link" target="_blank" href="olugbemiro olumide Résumé (T).pdf" data-switch>Résumé</a></li>
 						</ul>
 					</div>
@@ -455,9 +455,9 @@ a {
 				<div class="menu-moble menu__inner " >
 <br>
 				
-			<a class="menu__link" href="#" data-switch> Portfolio</a> |	<a class="menu__item menu__link" href="https://github.com/Olumide95" data-switch>GitHub</a> | 
+			<a class="menu__link" href="/projects" data-switch> Portfolio</a> |	<a class="menu__item menu__link" href="https://github.com/Olumide95" data-switch>GitHub</a> | 
 				
-				<a class="menu__link" href="#" data-switch>Contact</a> |
+				<a class="menu__link" href="mailto:olugbemiro.olumide@gmail.com" data-switch>Contact</a> |
 				<a class="menu__link"  target="_blank" href="olugbemiro olumide Résumé (T).pdf" data-switch>Résumé</a> 
 
 				 </div>

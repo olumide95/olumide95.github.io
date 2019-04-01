@@ -3,19 +3,17 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Olumide Olugbemiro | Portfolio</title>
-		<meta name="description" content="Demo of the tutorial on how to create a fake 3D image effect with WebGL shaders." />
-		<meta name="keywords" content="webgl, 3d, image, shader, javascript, tutorial, demo, web development, effect" />
-		<meta name="author" content="Codrops" />
-		<link rel="shortcut icon" href="favicon.png">
+	<title>Olumide Olugbemiro | Full-Stack Web Developer</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="webgl, 3d, image, shader, javascript, portfolio" />
+    <meta name="author" content="Ølumide" />
+    <link rel="shortcut icon" href="favicon.PNG">
 		<link rel="stylesheet" type="text/css" href="css/base.css" />
 
 		<link rel="stylesheet" type="text/css" href="css/base1.css" />
 		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
 		<link rel="stylesheet" type="text/css" href="css/demo.css" />
 		<link rel="stylesheet" type="text/css" href="css/pieces.css" />
-		<link rel="stylesheet" type="text/css" href="sponsor/pater.css" />
-		
 
 		<style type="text/css">
 			
@@ -322,6 +320,10 @@ skew to change the 'thickness' of the glitch.*/
   pointer-events: auto;
 }
 
+.view{
+  pointer-events: auto;
+}
+
 
 .overlay-effect:before{
   position: absolute;
@@ -332,9 +334,73 @@ skew to change the 'thickness' of the glitch.*/
   height:100%;
   display: block;
   z-index:0;
-  background-color: rgba(135, 206, 235, 0.4);
+  background-color: rgba(0, 0, 128, 0.4);
 }
 
+.overlay-effect2:before{
+  position: absolute;
+  content:" ";
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  display: block;
+  z-index:0;
+  background-color: rgba(50, 205, 50, 0.4);
+}
+.preview__content {
+    column-count: 1;
+
+}
+
+.left {
+
+left: 0;
+
+}
+
+.btn {
+  box-sizing: border-box;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: transparent;
+  border: 2px solid #64dcdc;
+  pointer-events: auto;
+  border-radius: 3em;
+  color: #64dcdc;
+  cursor: pointer;
+  display: flex;
+  align-self: center;
+  font-size: .8rem;
+  font-weight: 400;
+  line-height: .5;
+  margin: 0px;
+  padding: 1.1em 2.7em;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+.btn:hover, .btn:focus {
+  color: #fff;
+  outline: 0;
+}
+
+.btn-view {
+  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+.btn-view:hover {
+  box-shadow: 0 0 40px 40px #64dcdc inset;
+}
+
+@media screen and (max-width: 479px) {
+.preview__content {
+    column-count: 1;
+    font-size: .871em;
+}
+}
 		</style>
 	</head>
 	<body class="demo-3">
@@ -392,8 +458,25 @@ skew to change the 'thickness' of the glitch.*/
             </div>
             <h3 class="preview__title">Paydraft</h3>
             <div class="preview__content">
-              <p>You’re not your job. You’re not how much money you have in the bank. You’re not the car you drive. You’re not the contents of your wallet. You’re not your f***ing khakis. You’re the all-singing, all-dancing crap of the world. What do you want? Wanna go back to the s*** job, f***in’ condo world, watching sitcoms? F*** you, I won’t do it. Fifth rule: one fight at a time, fellas.</p>
+              
+              <h3><strong>About</strong></h3>
+<p>Financing & Insurance Solutions Provider</p>
+                <h3><strong>Technologies Used</strong></h3>
+              <p><ul>
+                
+                <li><strong>PHP/Laravel</strong></li>
+                <li><strong>JQuery</strong></li>
+                <li><strong>SOAP Client</strong></li>
+                <li><strong>SOAP API Integration</strong></li>
+                <li><strong>Bootstrap</strong></li>
+                <li><strong>Cron Jobs</strong></li>
+                
+              </ul></p>
+
+               <button class="btn btn-view" onclick="window.open('https://auto.paydraft.com')">View Website</button>
             </div>
+
+
           </div>
           <div class="slide__img-wrap">
             <div class="slide__img overlay-effect" style="background-image: url(img/1.png);"></div>
@@ -405,74 +488,99 @@ skew to change the 'thickness' of the glitch.*/
         <div class="slide">
           <div class="preview">
             <div class="preview__img-wrap">
-              <div class="preview__img" style="background-image: url(img/project2.jpg);"></div>
+              <div class="preview__img overlay-effect" style="background-image: url(img/project2.png);"></div>
               <div class="preview__img-reveal"></div>
             </div>
-            <h3 class="preview__title">Jackardi Jack</h3>
+            <h3 class="preview__title">Gvi Group</h3>
             <div class="preview__content">
-              <p>You’re not your job. You’re not how much money you have in the bank. You’re not the car you drive. You’re not the contents of your wallet. You’re not your f***ing khakis. You’re the all-singing, all-dancing crap of the world. What do you want? Wanna go back to the s*** job, f***in’ condo world, watching sitcoms? F*** you, I won’t do it. Fifth rule: one fight at a time, fellas.</p>
+              
+              <h3><strong>About</strong></h3>
+<p>Providing Exceptional Support Services To The Oil and Gas Industry.</p>
+                <h3><strong>Technologies Used</strong></h3>
+              <p><ul>
+                
+                <li><strong>PHP/Laravel</strong></li>
+                <li><strong>JQuery</strong></li>
+                <li><strong>Bootstrap</strong></li>
+                
+              </ul></p>
+<button class="btn btn-view" onclick="window.open('https://gvi-group.com')">View Website</button>
+           
+               
             </div>
+
+
           </div>
           <div class="slide__img-wrap">
-            <div class="slide__img" style="background-image: url(img/2.jpg);"></div>
+            <div class="slide__img overlay-effect" style="background-image: url(img/2.png);"></div>
             <div class="slide__img-reveal"></div>
           </div>
           <span class="slide__number">#02</span>
-          <h3 class="slide__title">Jackardi</h3>
+          <h3 class="slide__title" id="pro1">Gvi Group</h3>
         </div>
+
         <div class="slide">
           <div class="preview">
             <div class="preview__img-wrap">
-              <div class="preview__img" style="background-image: url(img/project3.jpg);"></div>
+              <div class="preview__img overlay-effect" style="background-image: url(img/project3.png);"></div>
               <div class="preview__img-reveal"></div>
             </div>
-            <h3 class="preview__title">Hostabili Hell</h3>
+            <h3 class="preview__title">Renerworld</h3>
             <div class="preview__content">
-              <p>You’re not your job. You’re not how much money you have in the bank. You’re not the car you drive. You’re not the contents of your wallet. You’re not your f***ing khakis. You’re the all-singing, all-dancing crap of the world. What do you want? Wanna go back to the s*** job, f***in’ condo world, watching sitcoms? F*** you, I won’t do it. Fifth rule: one fight at a time, fellas.</p>
+            
+
+               <h3><strong>About</strong></h3>
+           <p>Renewable energy solutions</p>
+                <h3><strong>Technologies Used</strong></h3>
+              <p><ul>
+                
+                <li><strong>PHP/Laravel</strong></li>
+                <li><strong>JQuery</strong></li>
+                <li><strong>Bootstrap</strong></li>
+                
+              </ul></p>
+<button class="btn btn-view" onclick="window.open('https://renerworld.com/')">View Website</button>
+           
             </div>
           </div>
           <div class="slide__img-wrap">
-            <div class="slide__img" style="background-image: url(img/3.jpg);"></div>
+            <div class="slide__img overlay-effect" style="background-image: url(img/3.png);"></div>
             <div class="slide__img-reveal"></div>
           </div>
           <span class="slide__number">#03</span>
-          <h3 class="slide__title">Hostabili</h3>
+          <h3 class="slide__title">Renerworld</h3>
         </div>
-        <div class="slide">
+
+
+          <div class="slide">
           <div class="preview">
             <div class="preview__img-wrap">
-              <div class="preview__img" style="background-image: url(img/project4.jpg);"></div>
+              <div class="preview__img overlay-effect " style="background-image: url(img/project4.png);"></div>
               <div class="preview__img-reveal"></div>
             </div>
-            <h3 class="preview__title">Tellawa Tell</h3>
+            <h3 class="preview__title">3D PCV</h3>
             <div class="preview__content">
-              <p>You’re not your job. You’re not how much money you have in the bank. You’re not the car you drive. You’re not the contents of your wallet. You’re not your f***ing khakis. You’re the all-singing, all-dancing crap of the world. What do you want? Wanna go back to the s*** job, f***in’ condo world, watching sitcoms? F*** you, I won’t do it. Fifth rule: one fight at a time, fellas.</p>
+              <h3><strong>About</strong></h3>
+           <p>3D point Cloud Visualizer</p>
+                <h3><strong>Technologies Used</strong></h3>
+              <p><ul>
+                
+                <li><strong>C++</strong></li>
+                <li><strong>PCL</strong></li>
+                <li><strong>OpenCV</strong></li>
+                 <li><strong>KinectSDK</strong></li>
+                
+              </ul></p>
+<button class="btn btn-view" onclick="window.open('https://github.com/olumide95/3D-Point-cloud-Visualizer')">View Project</button>
+           
             </div>
           </div>
           <div class="slide__img-wrap">
-            <div class="slide__img" style="background-image: url(img/4.jpg);"></div>
+            <div class="slide__img overlay-effect" style="background-image: url(img/4.png);"></div>
             <div class="slide__img-reveal"></div>
           </div>
           <span class="slide__number">#04</span>
-          <h3 class="slide__title">Tellawa</h3>
-        </div>
-        <div class="slide">
-          <div class="preview">
-            <div class="preview__img-wrap">
-              <div class="preview__img" style="background-image: url(img/project5.jpg);"></div>
-              <div class="preview__img-reveal"></div>
-            </div>
-            <h3 class="preview__title">Lochnox Lox</h3>
-            <div class="preview__content">
-              <p>You’re not your job. You’re not how much money you have in the bank. You’re not the car you drive. You’re not the contents of your wallet. You’re not your f***ing khakis. You’re the all-singing, all-dancing crap of the world. What do you want? Wanna go back to the s*** job, f***in’ condo world, watching sitcoms? F*** you, I won’t do it. Fifth rule: one fight at a time, fellas.</p>
-            </div>
-          </div>
-          <div class="slide__img-wrap">
-            <div class="slide__img" style="background-image: url(img/5.jpg);"></div>
-            <div class="slide__img-reveal"></div>
-          </div>
-          <span class="slide__number">#05</span>
-          <h3 class="slide__title">Lochnox</h3>
+          <h3 class="slide__title">3D PCV</h3>
         </div>
         <nav class="slidenav">
           <button class="slidenav__item slidenav__item--prev">Previous</button>
