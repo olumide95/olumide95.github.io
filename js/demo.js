@@ -26,7 +26,8 @@
 				imgWrap: this.DOM.el.querySelector('.preview__img-wrap'),
 				revealer: this.DOM.el.querySelector('.preview__img-wrap > .preview__img-reveal'),
 				title: this.DOM.el.querySelector('.preview__title'),
-				content: this.DOM.el.querySelector('.preview__content')
+				content: this.DOM.el.querySelector('.preview__content'),
+				button: this.DOM.el.querySelector('.preview__content > .preview__btn')
 			};
 
 			// Some config values.
@@ -109,6 +110,15 @@
 		// Show/Hide the preview.
 		togglePreview(action) {
 			return new Promise((resolve, reject) => {
+
+				if (action === 'show') {
+					this.DOM.preview.button.style.display = 'block';
+					console.log('show');
+				}
+				else {
+					this.DOM.preview.button.style.display = 'none';
+					console.log('hide');
+				}
 				// Hide/Show revealer.
 				TweenMax.to(this.DOM.preview.revealer, this.config.animation.duration, {
 					delay: action === 'hide' ? 0 : this.config.animation.duration/2,
@@ -126,7 +136,7 @@
 					opacity: action === 'hide' ? 0 : 1
 				});
 				// Move and fade the title and content.
-				TweenMax.to([this.DOM.preview.title,this.DOM.preview.content], this.config.animation.duration, {
+				TweenMax.to([this.DOM.preview.title,this.DOM.preview.content,this.DOM.preview.btn], this.config.animation.duration, {
 					delay: action === 'hide' ? 0 : this.config.animation.duration/2,
 					ease: this.config.animation.ease,
 					startAt: action === 'hide' ? {} : {opacity: 0, y: '200%'},
