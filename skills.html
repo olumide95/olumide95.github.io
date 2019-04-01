@@ -57,9 +57,26 @@ display: none;
 display: block;
 }
   }
+
+  @media (max-width: 800px) and (orientation: landscape){
+#rotate {
+    position: fixed;
+    background: #212121 url('img/rotate.jpg') no-repeat center;
+    background-size: 100% auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999999999999;
+    display: block;
+    !importantopacity: 1 !important;
+}
+}
 </style>
 	</head>
 	<body class="demo-3">
+
+
 		<main>
       <svg class="hidden">
       <symbol id="icon-arrow" viewBox="0 0 24 24">
@@ -87,7 +104,7 @@ display: block;
           data-imageDepth="img/canyon-map.jpg" 
           data-horizontalThreshold="35" 
           data-verticalThreshold="25">
-        </div>
+        </div><div id="rotate"></div>
         <div class="frame__content ">Ø</div>
         <div class="content">
         <div class="content__inner" >

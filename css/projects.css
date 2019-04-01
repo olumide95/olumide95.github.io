@@ -1,4 +1,17 @@
-		
+		  @media (max-width: 800px) and (orientation: landscape){
+#rotate {
+    position: fixed;
+    background: #212121 url('img/rotate.jpg') no-repeat center;
+    background-size: 100% auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999999999999;
+    display: block;
+    !importantopacity: 1 !important;
+}
+} 
 
 			@import url("https://fonts.googleapis.com/css?family=Montserrat:100");
 html, body, h1 {
