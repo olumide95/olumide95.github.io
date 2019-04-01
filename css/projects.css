@@ -1,4 +1,13 @@
-		  @media (max-width: 800px) and (orientation: landscape){
+
+			@import url("https://fonts.googleapis.com/css?family=Montserrat:100");
+html, body, h1 {
+  padding: 0;
+  margin: 0;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+}
+
+      @media (max-width: 800px) and (orientation: landscape){
 #rotate {
     position: fixed;
     background: #212121 url('../img/rotate.jpg') no-repeat center;
@@ -13,13 +22,6 @@
 }
 } 
 
-			@import url("https://fonts.googleapis.com/css?family=Montserrat:100");
-html, body, h1 {
-  padding: 0;
-  margin: 0;
-  color: white;
-  font-family: 'Montserrat', sans-serif;
-}
 p {
   font-weight: bolder;
 }
