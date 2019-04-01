@@ -113,7 +113,7 @@ main {
 	z-index: 100;
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: flex-end;
 	justify-items: center;
 }
 
@@ -420,7 +420,7 @@ main {
 	.codrops-header {
 		grid-area: codropsheader;
 		padding: 0;
-		justify-content: start;
+		justify-content: flex-end;
 	}
 	.codrops-links {
 		margin: 0;
