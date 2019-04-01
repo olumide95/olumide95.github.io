@@ -356,7 +356,9 @@ a {
 
 
 }
-
+.fa{
+  margin: 10px;
+}
 
 @media screen and (max-width: 479px) {
 /* start of phone styles */
