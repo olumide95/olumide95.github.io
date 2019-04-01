@@ -1,7 +1,7 @@
 		  @media (max-width: 800px) and (orientation: landscape){
 #rotate {
     position: fixed;
-    background: #212121 url('img/rotate.jpg') no-repeat center;
+    background: #212121 url('../img/rotate.jpg') no-repeat center;
     background-size: 100% auto;
     top: 0;
     left: 0;
