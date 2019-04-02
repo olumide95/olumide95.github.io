@@ -21,30 +21,42 @@
 display: none;
 }
 #tagcloud {
+  margin-top: -12.5%;
 display: block;
 }
+.content{
 
+   filter: brightness(1.2);
+   background-color: rgba(0, 0, 0, 0.5);
+}
   .skills {
 
    width: 100%;
    float: right;
    margin: auto;
+   margin-top:5%
   }
 
   .skills-text{
-    padding-top: 2%;
-   float: left; width: 45%;
+   float: left; width:45%;
    color: white;
    line-height: 1.8em;
-   filter: brightness(1.2);
-   background-color: rgba(0, 0, 0, 0.18);
+   
   }
 .frame__content { 
     font-size: 40vw;
   }
+
+
+
 @media screen and (max-width: 479px) {
   .frame__content {
     font-size: 100vw;
+}
+
+.skills{
+     
+    margin-top:20%;
 }
 .skills-text{
 width: 100%;
@@ -58,6 +70,41 @@ display: none;
 display: none;
 }
   }
+
+@media (max-width:1025px)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ 
+
+.skills-text{
+  margin-top:20%;
+  width: 100%;
+}
+
+
+}
+  @media
+
+only screen and ( min-width: 1920px)
+{
+
+  .skills{
+     
+    margin-top:10%;
+}
+  .skills-text{
+   font-size: 120% !important;
+   
+  }
+
+  #tagcloud {
+ display: none;
+}
+
+#tagcloud_mobile {
+   margin-top: -12.5%;
+display: block;
+}
+
+}
+
 
   @media (max-width: 800px) and (orientation: landscape){
 #rotate {
@@ -126,7 +173,7 @@ display: none;
           </div>
             
           <div class="skills">
-<div class="skills-text" >  <br><br><h1> <strong> Skills & Experience </strong></h1>
+<div class="skills-text" >  <h1> <strong> Skills & Experience </strong></h1>
 <p style="font-weight: bolder;">
 I'm a full-stack developer with expertise in LAMP stack, CMS and experience working on various web projects in different sectors while ensuring cross browser compatibility and fluid responsiveness across devices.
 I also have experience working with techonolgies such as computer vision, Python and Powershell.
@@ -151,7 +198,7 @@ Apart from developing applications from scratch i also fix up boken or outdated 
 <li><a href="#">HTML5</a></li>
 <li><a href="#">CSS</a></li>
 <li><a href="#">Python</a></li>
-<li><a href="#">Web API Development</a></li>
+<li><a href="#">REST</a></li>
 <li><a href="#">PowerShell</a></li>
 <li><a href="#">Javascript</a></li>
 <li><a href="#">OpenCV</a></li>
@@ -174,7 +221,7 @@ Apart from developing applications from scratch i also fix up boken or outdated 
 <li><a href="#">HTML5</a></li>
 <li><a href="#">CSS</a></li>
 <li><a href="#">Python</a></li>
-<li><a href="#">Web API Development</a></li>
+<li><a href="#">REST</a></li>
 <li><a href="#">PowerShell</a></li>
 <li><a href="#">Javascript</a></li>
 <li><a href="#">OpenCV</a></li>
@@ -207,11 +254,11 @@ Apart from developing applications from scratch i also fix up boken or outdated 
 <script type="text/javascript">
 var settings = {
 //height of sphere container
-height: 500,
+height: 650,
 //width of sphere container
-width: 500,
+width: 650,
 //radius of sphere
-radius: 150,
+radius: 190,
 //rotation speed
 speed: 1,
 //sphere rotations slower
@@ -234,11 +281,11 @@ color: ''
 
 var settings_mobile = {
 //height of sphere container
-height: 300,
+height: 900,
 //width of sphere container
-width: 300,
+width: 900,
 //radius of sphere
-radius: 90, 
+radius: 280,
 //rotation speed
 speed: 1,
 //sphere rotations slower
@@ -246,7 +293,7 @@ slower: 0.8,
 //delay between up<a href="https://www.jqueryscript.net/time-clock/">date</a> position
 timer: 5,
 //dependence of a font size on axis Z
-fontMultiplier: 12,
+fontMultiplier: 35,
 //tag css stylies on mouse over
 hoverStyle: {
 border: 'none',
