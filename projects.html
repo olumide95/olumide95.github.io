@@ -264,6 +264,15 @@
      $( ".slide__title" ).click(function() {
       $( ".slidenav__preview" ).click();
     });
+
+     $("body").keydown(function(e) {
+  if(e.keyCode == 37) { // left
+    $(".slidenav__item--prev").click();
+  }
+  else if(e.keyCode == 39) { // right
+    $(".slidenav__item--next").click();
+  }
+});
     </script>
 	</body>
 </html>
