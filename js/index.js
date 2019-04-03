@@ -41,6 +41,7 @@
     };
 
     window.onload = function() {
+        $(".preloader").delay(2000).fadeOut("slow");
         var elements = document.getElementsByClassName('typewrite');
         for (var i=0; i<elements.length; i++) {
             var toRotate = elements[i].getAttribute('data-type');
