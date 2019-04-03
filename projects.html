@@ -15,22 +15,10 @@
 		<link rel="stylesheet" type="text/css" href="css/demo.css" />
 		<link rel="stylesheet" type="text/css" href="css/pieces.css" />
 <link rel="stylesheet" type="text/css" href="css/projects.css" />
-<style type="text/css">
-  
-  @media only screen and ( min-width: 1920px)
-{
 
-  .slide__number{
-
-    font-weight: bold;
-
-  }
-
-}
-
-</style>
 	</head>
 	<body class="demo-3">
+      <div class="preloader"></div>
     <div id="rotate"></div>
 		<main>
       <svg class="hidden">
@@ -285,6 +273,12 @@
   else if(e.keyCode == 39) { // right
     $(".slidenav__item--next").click();
   }
+});
+
+     $(window).load(function() {
+   
+   $(".preloader").delay(2000).fadeOut("slow");
+   
 });
     </script>
 	</body>

@@ -15,116 +15,11 @@
 		<link rel="stylesheet" type="text/css" href="css/demo.css" />
 		<link rel="stylesheet" type="text/css" href="css/pieces.css" />
 <link rel="stylesheet" type="text/css" href="css/skills.css" />
-<style type="text/css">
 
-#tagcloud_mobile {
-display: none;
-}
-#tagcloud {
-  margin-top: -12.5%;
-display: block;
-}
-.content{
-
-   filter: brightness(1.2);
-   background-color: rgba(0, 0, 0, 0.5);
-}
-  .skills {
-
-   width: 100%;
-   float: right;
-   margin: auto;
-   margin-top:5%
-  }
-
-  .skills-text{
-   float: left; width:45%;
-   color: white;
-   line-height: 1.8em;
-   
-  }
-.frame__content { 
-    font-size: 40vw;
-  }
-
-
-
-@media screen and (max-width: 479px) {
-  .frame__content {
-    font-size: 100vw;
-}
-
-.skills{
-     
-    margin-top:5%; 
-}
-.skills-text{
-width: 100%;
-font-size: 14px !important; 
- padding-top: 0%;
-  }
-#tagcloud {
-display: none;
-}
-#tagcloud_mobile {
-display: none;
-}
-  }
-
-@media (max-width:1025px)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ 
-
-.skills-text{
-  margin-top:20%;
-  width: 100%;
-}
-
-
-}
-  @media
-
-only screen and ( min-width: 1920px)
-{
-
-  .skills{
-     
-    margin-top:10%;
-}
-  .skills-text{
-   font-size: 120% !important;
-   
-  }
-
-  #tagcloud {
- display: none;
-}
-
-#tagcloud_mobile {
-   margin-top: -12.5%;
-display: block;
-}
-
-}
-
-
-  @media (max-width: 800px) and (orientation: landscape){
-#rotate {
-    position: fixed;
-    background: #212121 url('img/rotate.jpg') no-repeat center;
-    background-size: 100% auto;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 9999999999999;
-    display: block;
-    !importantopacity: 1 !important;
-}
-}
-</style>
 	</head>
 	<body class="demo-3">
 <div id="rotate"></div>
-
+<div class="preloader"></div>
 		<main>
       <svg class="hidden">
       <symbol id="icon-arrow" viewBox="0 0 24 24">
@@ -312,6 +207,7 @@ $('#tagcloud').tagoSphere(settings);
 $('#tagcloud_mobile').tagoSphere2(settings_mobile);
 $('#tagcloud').mouseover();
 $('#tagcloud_mobile').mouseover();
+$(".preloader").delay(2000).fadeOut("slow");
 });
 
 
